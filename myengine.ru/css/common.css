@@ -1,0 +1,66 @@
+body{
+	margin: 0px;
+	padding: 0px;
+	background-color: #edeef0;
+}
+
+.topmenu {
+	height: 42px;
+	width: 100%;
+	background: #4a76a8;
+}
+
+.loginmenu {
+	text-align: center;
+	padding-top: 8px;
+}
+
+.loginmenu input {
+	height: 25px;
+	width: 150px;
+	border-radius: 10px;
+	border: 1px solid #fff;
+	text-align: center;
+}
+
+.loginmenu button {
+	height: 25px;
+	width: 150px;
+	border-radius: 10px;
+	border: 1px solid #827ffe;
+	background-color: #827ffe;
+	color: #fff;
+}
+
+.register {
+	width: 350px;
+	height: 320px;
+	background-color: #fff;
+	border: 1px solid #fff;
+	border-radius: 10px;
+	margin-top: 150px;
+}
+
+.register h2 {
+	color: #979997;
+}
+
+.register input	{
+	width: 300px;
+	height: 30px;
+	margin-bottom: 10px;
+	border-radius: 10px;
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.register button	{
+	width: 300px;
+	height: 30px;
+	margin-bottom: 10px;
+	border-radius: 10px;
+	border: 1px solid #138808;
+	background-color: #138808;
+	text-align: center;
+	color: #fff;
+}

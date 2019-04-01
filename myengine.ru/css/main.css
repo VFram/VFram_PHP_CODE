@@ -1,0 +1,194 @@
+body {
+	margin: 0px;
+	padding: 0px;
+	background: #edeef0;
+}
+
+.top {
+	height: 100px;
+	width: 100%;
+	background: #4a76a8;
+	position: fixed;
+}
+
+.img img {
+	margin-top: 30px;
+	margin-left: 25px;
+}
+
+.search {
+	margin-top: -40px;
+	margin-left: 200px;
+}
+
+.search input {
+	width: 160px;
+	height: 25px;
+	background-color: #2a5885;
+	border-radius: 5px;
+	border: 1px solid #2a5885;
+	color: #fff;
+	padding-left: 10px;
+	padding-top: 2px;
+}
+
+.search i {
+	margin-left: -30px;
+	color: #fff;
+}
+
+.link {
+	margin-left: 430px;
+	margin-top: -25px;
+}
+
+.link a {
+	text-decoration: none;
+	color: #fff;
+	font-size: 20px;
+	margin-left: 25px;
+}
+
+.smallinfo {
+	text-align: right;
+}
+
+.phototop img {
+	width: 55px;
+	height: 55px;
+	border-radius: 50%;
+	margin-top: -37px;
+	margin-right: 170px;
+	
+}
+
+.nametop {
+	margin-top: -45px;
+	margin-right: 20px;
+}
+
+.nametop a {
+	text-decoration: none;
+	color: #fff;
+	font-size: 20px;
+}
+
+.leftmenu {
+	width: 300px;
+	height: 1100px;
+	background-color: #2a5885;
+	position: fixed;
+	margin-top: 100px;
+}
+
+.leftmenu i {
+	font-size: 25px;
+	color: #fff;
+}
+
+.leftmenu a {
+	color: #fff;
+	text-decoration: none;
+}
+
+.home i {
+	margin-left: 90px;
+	font-size: 25px;
+	padding-top: 20px;
+}
+
+.frends i {
+	margin-left: 90px;
+	font-size: 30px;
+	margin-top: -7px;
+}
+
+.photo i {
+	margin-left: 90px;
+	font-size: 23px;
+}
+
+.video i {
+	margin-left: 90px;
+	font-size: 23px;
+}
+
+.audio i {
+	margin-left: 90px;
+}
+
+.messages i {
+	margin-left: 90px;
+}
+
+.groups i {
+	margin-left: 90px;
+	font-size: 20px;
+}
+
+.news i {
+	margin-left: 90px;
+	font-size: 23px;
+}
+
+.games i {
+	font-size: 19px;
+}
+
+
+.home a {
+	margin-left: 5px;
+}
+
+.login {
+	margin-top: 350px;
+	text-align: center;
+}
+
+.login input {
+	text-align: center;
+	width: 250px;
+	height: 30px;
+	border-radius: 10px;
+	border: 1px solid #fff;
+	margin-bottom: 10px;
+	color: #000;
+}
+
+.login button {
+	border-radius: 10px;
+	width: 250px;
+	height: 30px;
+	border: 1px solid #fff;
+}
+
+.login button:hover {
+	background: #42aaff;
+	border: 1px solid #42aaff;
+	color: #fff;
+}
+
+.smallinfo h2 {
+	margin-top: -20px;
+	margin-right: 20px;
+	color: #fff;
+}
+
+.leftmenu input {
+	width: 250px;
+	text-align: center;
+	margin-left: 20px;
+	margin-top: 10px;
+	height: 30px;
+	border-radius: 10px;
+	border: 1px solid #fff;
+}
+
+.leftmenu button {
+	width: 250px;
+	height: 30px;
+	margin-left: 20px;
+	margin-top: 10px;
+	border-radius: 10px;
+	border: 1px solid #fff;
+}

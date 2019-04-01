@@ -1,0 +1,28 @@
+body {
+	margin: 0px;
+	padding: 0px;
+	background: #edeef0;
+}
+
+.block {
+	width: 250;
+	height: 250px;
+	background-color: #fff;
+	margin-top: 100px;
+	border-radius: 5px;
+	border: 1px solid #cfcfcf;
+}
+
+.block p {
+	font-size: 30px;
+}
+
+.block input {
+	width: 230px;
+	height: 30px;
+	border-radius: 5px;
+	border: 1px solid #cfcfcf;
+	margin-top: 10px;
+	text-align: center;
+
+}
