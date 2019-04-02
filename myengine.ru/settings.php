@@ -1,5 +1,12 @@
 <?
+/*
+Имя файла: settings.php
+Описание: Страница настроек пользователя
+*/
+	//Запуск сессии.
 	session_start();
+
+	//Подключение вывода данных.
 	include 'includes/module/sql.php';
 ?>
 <!DOCTYPE html>
@@ -13,9 +20,11 @@
 <body>
 <?
 if(isset($_SESSION['id'])) {
+	//Подключение файлов для авторизированного пользователя
 	include 'includes/templates/def/top.php';
 	include 'includes/templates/def/leftmenu.php';
 }else{
+	//Подключение файлов для не авторизированного пользователя
 	include 'includes/templates/def/topno.php';
 	include 'includes/templates/def/leftmenuno.php';
 }

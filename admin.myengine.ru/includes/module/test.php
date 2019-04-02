@@ -1,5 +1,9 @@
 <?
-if (isset($_SESSION['admin'])) {
+
+session_start();
+if (isset($_SESSION['id'])) {
+	header("Location: /admin");
 }else{
-	header("Location: /includes/pages/login.php");
 }
+
+?>

@@ -2,20 +2,21 @@
 session_start();
 include '../db/dbconnect.php';
 
-if (empty($_POST['admin_key'])) {
-  echo "Введите ваш ключ";
+if (empty($_POST['telephone'])) {
+  echo "Введите ваш номер телефона";
 }
 
 elseif (empty($_POST['password'])) {
   echo "Введите ваш пароль!";
 }else{
-	$admin_key = $_POST['admin_key'];
+	$telephone = $_POST['telephone'];
 	$password = $_POST['password'];
-	$query = mysqli_query($CONNECT, "SELECT admin_key, password FROM admin WHERE `admin_key` = '{$admin_key}' AND `password` = '{$password}'");
+	$query = mysqli_query($CONNECT, "SELECT id, telephone, password FROM users WHERE `telephone` = '{$telephone}' AND `password` = '{$password}'");
 	$sql = mysqli_fetch_assoc($query);
-	if ($sql['admin_key'] === $_POST['admin_key'] AND $sql['password'] === $_POST['password']) {
+	$row = mysqli_fetch_array($query);
+	if ($sql['telephone'] === $_POST['telephone'] AND $sql['password'] === $_POST['password']) {
 		echo "Вошёл";
-		$_SESSION['admin'] = $sql['admin_key'];
+		$_SESSION['id'] = $row['id'];
 	}else{
 		echo "Данные указаны не верно!";
 	}

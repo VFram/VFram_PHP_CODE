@@ -1,5 +1,13 @@
 <?
+/*
+Имя файла: index.php
+Описание: Главная странца
+*/
+
+//Подключение БД.
 include 'includes/db/dbconnect.php';
+
+//Подключение файла тест.
 include 'includes/module/test.php';
 ?>
 <link rel="stylesheet" type="text/css" href="css/common.css">

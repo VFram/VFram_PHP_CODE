@@ -1,4 +1,9 @@
 <?
+/*
+Имя файла: api.php
+Описание: api интерфейс пользователя
+*/
+
 //Выборка данных.
 include 'includes/db/dbconnect.php';
 

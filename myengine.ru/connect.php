@@ -1,3 +1,9 @@
+<?
+/*
+Имя файла: connect.php
+Описание: Подключение файлов
+*/
+?>
 	<meta charset="utf-8">
 	<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
 	<link rel="stylesheet" type="text/css" href="css_all/common.css">
