@@ -1,66 +1,198 @@
-body{
+body {
 	margin: 0px;
 	padding: 0px;
-	background-color: #edeef0;
+		overflow-x:hidden;  /*для горизонтального*/
 }
 
-.topmenu {
-	height: 42px;
+.block_top {
 	width: 100%;
-	background: #4a76a8;
+	height: 100px;
+	background-color: #4a76a8;
+	position: fixed;
 }
 
-.loginmenu {
-	text-align: center;
-	padding-top: 8px;
+.block_logo {
+	padding-left: 75px;
+	padding-top: 30px;
 }
 
-.loginmenu input {
+.search {
+	margin-top: -40px;
+	margin-left: 300px;
+}
+
+.search input {
+	width: 160px;
 	height: 25px;
-	width: 150px;
-	border-radius: 10px;
-	border: 1px solid #fff;
-	text-align: center;
+	background-color: #2a5885;
+	border: 1px solid #2a5885;
+	border-radius: 5px;
+	color: #fff;
+	padding-left: 10px;
 }
 
-.loginmenu button {
-	height: 25px;
-	width: 150px;
-	border-radius: 10px;
-	border: 1px solid #827ffe;
-	background-color: #827ffe;
+.search i {
+	margin-left: -30px;
 	color: #fff;
 }
 
-.register {
-	width: 350px;
-	height: 320px;
-	background-color: #fff;
-	border: 1px solid #fff;
-	border-radius: 10px;
-	margin-top: 150px;
+.link {
+	margin-left: 460px;
+	margin-top: -23px;
+	position: fixed;
 }
 
-.register h2 {
-	color: #979997;
-}
-
-.register input	{
-	width: 300px;
-	height: 30px;
-	margin-bottom: 10px;
-	border-radius: 10px;
-	border: 1px solid #000;
-	text-align: center;
-}
-
-.register button	{
-	width: 300px;
-	height: 30px;
-	margin-bottom: 10px;
-	border-radius: 10px;
-	border: 1px solid #138808;
-	background-color: #138808;
-	text-align: center;
+.link a {
+	text-decoration: none;
 	color: #fff;
+	font-size: 20px;
+	margin-left: 25px;
+}
+
+.block_info {
+	text-align: right;
+}
+
+.name_top {
+	margin-top: -23px;
+	margin-right: 80px;
+}
+
+.name_top a {
+	text-decoration: none;
+	font-size: 20px;
+	color: #fff;
+}
+
+.block_photo img {
+	width: 55px;
+	height: 55px;
+	border-radius: 50%;
+	margin-top: -40px;
+	margin-right: 10px;
+}
+
+.leftmenu {
+	width: 300px;
+	height: 100%;
+	background-color: #2a5885;
+	position: fixed;
+	margin-top: 100px;
+}
+
+.block_left_menu a {
+	color: #fff;
+	text-decoration: none;
+	margin-left: 5px;
+}
+
+.block_left_menu {
+	padding-top: 10px;
+}
+
+.block_left_menu i {
+	font-size: 25px;
+	color: #fff;
+	margin-left: 90px;
+	padding-top: 10px;
+}
+
+.photo {
+	padding-top: 5px;
+}
+
+.frends i {
+	font-size: 33px;
+}
+
+.audio i {
+	font-size: 28px;
+}
+
+.messages i {
+	font-size: 28px;
+}
+
+.news i {
+	font-size: 28px;
+}
+
+.settings i {
+	font-size: 30px;
+}
+
+.groups i {
+	font-size: 23px;
+}
+
+.exit i {
+	font-size: 30px;
+}
+
+.block_login {
+	text-align: center;
+	margin-top: 10px;
+}
+
+.news i {
+	font-size: 25px;
+}
+
+.games i {
+	font-size: 23px;
+}
+
+.block_login input {
+	width: 250px;
+	height: 30px;
+	border-radius: 5px;
+	border: 1px solid #fff;
+	margin-bottom: 5px;
+}
+
+.block_login button {
+	width: 250px;
+	height: 30px;
+	background-color: #19b80b;
+	border-radius: 5px;
+	border: 1px solid #19b80b;
+	margin-bottom: 5px;
+	color: #fff;
+	font-size: 15px;
+}
+
+.block_user {
+	padding-top: 100px;
+	padding-left: 300px;
+	height: 100px;
+	width: 100%;
+}
+
+
+.block_vftube_search {
+	text-align: center;
+	padding-top: 150px;
+	padding-left: 250px;
+}
+
+.block_vftube_search input {
+	height: 25px; 
+	width: 500px;
+	border-radius: 1px solid;
+}
+
+.block_vftube_search button {
+	height: 31px;
+	color: #a4b0b0;
+	width: 50px;
+	margin-left: -5px;
+}
+
+.transition-fade { 
+	transition: .4s; 
+	opacity: 1; 
+} 
+
+html.is-animating .transition-fade{ 
+	opacity: 0; 
 }

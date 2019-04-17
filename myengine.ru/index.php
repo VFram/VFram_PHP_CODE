@@ -4,33 +4,33 @@
 Описание: Главная странца
 */
 
-//Подключение БД.
-include 'includes/db/dbconnect.php';
-
 //Подключение файла тест.
 include 'includes/module/test.php';
+include 'connect.php';
 ?>
-<link rel="stylesheet" type="text/css" href="css/common.css">
-<div class="topmenu">
-	<div class="loginmenu">
-		<a class="vaylog" href="login"></a>
-			<form method="POST" action="includes/module/login.php">
-				<input type="text" name="email" placeholder="E-mail">
-				<input type="password" name="password" placeholder=Пароль>
-				<button>Войти</button>
+<link rel="stylesheet" type="text/css" href="css_all/main.css">
+<meta charset="utf-8">
+<div class="block_left_menu">
+	<div class="block_login" id="log">
+		<div class="block_logo_index">
+			<a href=""><img src="images/logoreg.png"></a>
+		</div>
+		<div class="block_form">
+			<span>Вход</span>
+			<form method="POST" action="includes/module/login.php" name="contact_form">
+				<div id="messageShow"></div>
+				<input type="text" name="email" id="username" placeholder="Введите ваш номер телефона или почту">
+				<input type="password" name="password" id="password" placeholder="Введите ваш пароль">
+				<button id="login">Войти</button>
 			</form>
+			<form method="POST" action="">
+				<div class="reset">
+					<button>Напомнить пароль</button>
+				</div>
+			</form>
+				<div class="register_link">
+					<a href="" id="reg">Регистрация</a>
+				</div>
+		</div>
 	</div>
 </div>
-<center>
-	<div class="register">
-		<h2>Регистрация</h2>
-			<form action="includes/module/register.php" method="POST">
-				<input type="text" name="username" placeholder="Ваше имя">
-				<input type="text" name="lastname" placeholder="Ваша фамилия">
-				<input type="text" name="telephone" placeholder="Ваш номер телефона">
-				<input type="text" name="email" placeholder="Ваш E-mail">
-				<input type="password" name="password" placeholder="Ваш пароль">
-				<button>Зарегистрироваться</button>
-			</form>
-	</div>
-</center>

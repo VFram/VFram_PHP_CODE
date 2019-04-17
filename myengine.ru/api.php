@@ -7,61 +7,93 @@
 //Выборка данных.
 include 'includes/db/dbconnect.php';
 
-//Установка кодировки.
-header('Content-TYPE: application/json');
-
-//Проверка на сушествование GET['api_key'].
-if (empty($_GET['api_key'])) {
-	echo "Error [No user api_key specified]";
-}
-
 //Выборка данных из БД по api_key.
 $query = mysqli_query($CONNECT, "SELECT * FROM users WHERE `api_key` = '".$_GET['api_key']."'");
 $result = mysqli_fetch_assoc($query);
 
-//Вывод всех данных.
-if ($result) {
-	$result = [
-		'id'        => $result['id'],
-		'ip'        => $result['ip'],
-		'api_key'   => $result['api_key'],
-		'email'     => $result['email'],
-		'telephone' => $result['telephone']
-	];
-	$all = json_encode($result);
-}
+//Установка кодировки.
+header('Content-TYPE: application/json');
 
-//Вывод id and ip.
-if ($result) {
-	$result = [
-		'id'        => $result['id'],
-		'ip'        => $result['ip']
-	];
-	$ip = json_encode($result);
-}
+//Подсчёт символов.
+$api = $_GET['api_key'];
+$api_l = strlen($api);
 
-//Методы и выводы.
-//Вывод всех значений пользователя.
+//Проверка на сушествование GET['api_key'].
+if (empty($_GET['api_key'])) {
+	echo "Error [No user api_key specified]";
+}else{
+	if ($_GET['method'] === "") {
+		echo " [No method specified]";
+	}else{
+		if ($_GET['version'] === "") {
+			echo " [No version specified]";
+		}else{
+			if ($_GET['version'] === "1.0" && $api_l > 30 && $api_l < 40) {
+				if ($_GET['method'] === "user.all") {
+					//Вывод всех данных.
+					$query = mysqli_query($CONNECT, "SELECT * FROM users WHERE `api_key` = '".$_GET['api_key']."'");
+					$result = mysqli_fetch_array($query);
+					if ($result) {
+						$result = [
+							'id'        => $result['id'],
+							'ip'        => $result['ip'],
+							'api_key'   => $result['api_key'],
+							'email'     => $result['email'],
+							'telephone' => $result['telephone']
+						];
+						$all = json_encode($result);
+						echo $all;
+					}
+					if (empty($result)) {
+						echo "[Not found api_key]";
+					}
 
-//Проверка на сушествование GET['method'].
-if ($_GET['method'] == "") {
-	echo " [No method specified]";
-}
-
-//Вывод ошибки при отсутствие GET['version'].
-if ($_GET['version'] == "") {
-	echo " [No version specified]";
-}
-
-//Проверка на сушествование GET['version'].
-if ($_GET['version'] == "1.0") {
-		//Вывод всех данных пользователя
-		if ($_GET['method'] == "user.all") {
-			echo $all;
+				}
+				//Метод user.ip.
+				if($_GET['method'] === "user.ip") {
+					//Вывод всех данных.
+					$query = mysqli_query($CONNECT, "SELECT * FROM users WHERE `api_key` = '".$_GET['api_key']."'");
+					$result = mysqli_fetch_array($query);
+					if ($result) {
+						$result = [
+							'id'        => $result['id'],
+							'ip'        => $result['ip']
+						];
+						$all = json_encode($result);
+						echo $ip;
+					}
+				}
+				//Метод user.email.
+				if($_GET['method'] === "user.email") {
+					//Вывод всех данных.
+					$query = mysqli_query($CONNECT, "SELECT * FROM users WHERE `api_key` = '".$_GET['api_key']."'");
+					$result = mysqli_fetch_array($query);
+					if ($result) {
+						$result = [
+							'id'        => $result['id'],
+							'email'     => $result['email']
+						];
+						$email = json_encode($result);
+						echo $email;
+					}
+				}
+				//Метод user.telephone.
+				if ($_GET['method'] === "user.telephone") {
+					//Вывод всех данных.
+					$query = mysqli_query($CONNECT, "SELECT * FROM users WHERE `api_key` = '".$_GET['api_key']."'");
+					$result = mysqli_fetch_array($query);
+					if ($result) {
+						$result = [
+							'id'        => $result['id'],
+							'telephone'     => $result['telephone']
+						];
+						$telephone = json_encode($result);
+						echo $telephone;
+					}
+				}
+			}else{
+				echo " [Invalid api_key length]";
+			}
 		}
-
-		//Вывод id, ip пользователя
-		if ($_GET['method'] == "user.ip") {
-			echo $ip;
-		}
+	}
 }

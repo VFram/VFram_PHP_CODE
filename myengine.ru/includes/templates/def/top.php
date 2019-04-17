@@ -2,35 +2,30 @@
 //Запуск сессии.
 session_start();
 
-//Выборка данных.
-include '/includes/module/sql.php';
-	//html.
-	echo '
-<div class="top">
-	<div class="img">
-		<img src="/images/logoreg.png">
-	</div>
+//Подключение переменных.
+include '/includes/init.php';
+?>
+<div class="block_top">
+	<div class="block_logo">
+		<a href="feed"><img src="/images/logoreg.png"></a>
+	</div>	
 	<div class="search">
 		<input type="text" name="search" placeholder="Поиск">
 		<i class="fas fa-search"></i>
 	</div>
 	<div class="link">
-		<a href="frends'.$_SESSION['id'].'">Люди</a>
+		<a href="frends<?=$session ?>">Люди</a>
 		<a href="games">Игры</a>
-		<a href="audio'.$_SESSION['id'].'">Музыка</a>
+		<a href="audio<?=$session ?>">Музыка</a>
 		<a href="support">Помощь</a>
 		<a href="edit">Редактирование</a>
 	</div>
-	<div class="smallinfo">
-		<div class="phototop">
-			<a href=""><img src="'.$sesrow['avatar'].'"></a>
-			<div class="nametop">
-				<a href="">'.$sesrow['username'].'&nbsp;'.$sesrow['lastname'].'</a>
-			</div>
+	<div class="block_info">
+		<div class="name_top">
+			<a href=""><?=$username?>&nbsp;<?=$lastname ?></a>
+		</div>
+		<div class="block_photo">
+			<img src="<?=$avatar?>">
 		</div>
 	</div>
 </div>
-
-';
-?>
-
